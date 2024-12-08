@@ -81,27 +81,27 @@ namespace Project_UAS_DataStructure
 
         private void button2_Click(object sender, EventArgs e)
         {
-            listBoxHasil.Items.Clear();
             //Process Sort
+            listBoxHasil.Items.Clear();
             if (type == "Quick")
             {
-
+                QuickSort();
             }
             else if (type == "Radix")
             {
-
+                RadixSort();
             }
             else if (type == "Heap")
             {
-
+                HeapSort();
             }
             else if (type == "Bubble")
             {
-
+                BubbleSort();
             }
             else if (type == "Shell")
             {
-
+                ShellSort();
             }
         }
 
