@@ -1,0 +1,10 @@
+D:\Sekolah\Materi Kuliah Semester 3\Data Structure\Project_DatStruc\Project_UAS_DataStructure\Project_UAS_DataStructure\bin\Debug\Project_UAS_DataStructure.exe.config
+D:\Sekolah\Materi Kuliah Semester 3\Data Structure\Project_DatStruc\Project_UAS_DataStructure\Project_UAS_DataStructure\bin\Debug\Project_UAS_DataStructure.exe
+D:\Sekolah\Materi Kuliah Semester 3\Data Structure\Project_DatStruc\Project_UAS_DataStructure\Project_UAS_DataStructure\bin\Debug\Project_UAS_DataStructure.pdb
+D:\Sekolah\Materi Kuliah Semester 3\Data Structure\Project_DatStruc\Project_UAS_DataStructure\Project_UAS_DataStructure\obj\Debug\Project_UAS_DataStructure.csproj.AssemblyReference.cache
+D:\Sekolah\Materi Kuliah Semester 3\Data Structure\Project_DatStruc\Project_UAS_DataStructure\Project_UAS_DataStructure\obj\Debug\Project_UAS_DataStructure.Form1.resources
+D:\Sekolah\Materi Kuliah Semester 3\Data Structure\Project_DatStruc\Project_UAS_DataStructure\Project_UAS_DataStructure\obj\Debug\Project_UAS_DataStructure.Properties.Resources.resources
+D:\Sekolah\Materi Kuliah Semester 3\Data Structure\Project_DatStruc\Project_UAS_DataStructure\Project_UAS_DataStructure\obj\Debug\Project_UAS_DataStructure.csproj.GenerateResource.cache
+D:\Sekolah\Materi Kuliah Semester 3\Data Structure\Project_DatStruc\Project_UAS_DataStructure\Project_UAS_DataStructure\obj\Debug\Project_UAS_DataStructure.csproj.CoreCompileInputs.cache
+D:\Sekolah\Materi Kuliah Semester 3\Data Structure\Project_DatStruc\Project_UAS_DataStructure\Project_UAS_DataStructure\obj\Debug\Project_UAS_DataStructure.exe
+D:\Sekolah\Materi Kuliah Semester 3\Data Structure\Project_DatStruc\Project_UAS_DataStructure\Project_UAS_DataStructure\obj\Debug\Project_UAS_DataStructure.pdb
