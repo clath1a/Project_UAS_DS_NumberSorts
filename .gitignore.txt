@@ -1,0 +1,4 @@
+
+*.cache
+Project_UAS_DataStructure/.vs/Project_UAS_DataStructure/v17/.suo
+Project_UAS_DataStructure/.vs/Project_UAS_DataStructure/v17/DocumentLayout.json
