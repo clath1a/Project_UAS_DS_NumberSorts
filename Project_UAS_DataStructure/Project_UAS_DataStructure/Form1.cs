@@ -15,6 +15,8 @@ namespace Project_UAS_DataStructure
     {
         private int[] data;
         private string type = "";
+        private int counter;
+
         public Form1()
         {
             InitializeComponent();
@@ -60,7 +62,7 @@ namespace Project_UAS_DataStructure
         {
             //Generate Random
             listBoxRaw.Items.Clear();
-            int counter = (int)numericUpDown1.Value;
+            counter = (int)numericUpDown1.Value;
             data = new int[counter];
 
             Random objRandom = new Random();
@@ -99,18 +101,44 @@ namespace Project_UAS_DataStructure
             }
             else if (type == "Radix")
             {
+                List<string> arr0 = new List<string>();
+                List<string> arr1 = new List<string>();
+                List<string> arr2 = new List<string>();
+                List<string> arr3 = new List<string>();
+                List<string> arr4 = new List<string>();
+                List<string> arr5 = new List<string>();
+                List<string> arr6 = new List<string>();
+                List<string> arr7 = new List<string>();
+                List<string> arr8 = new List<string>();
+                List<string> arr9 = new List<string>();
+                int iterasi = data.
+
+
                 var waktu = new Stopwatch();
                 waktu.Start();
 
-                RadixSort(data);
+
+                int[] coba = new int[5];
+                coba[0] = 2;
+                coba[1] = 3;
+                coba[2] = 4;
+                coba[3] = 50120;
+                coba[4] = 6;
+                string te = "009";
+
+                int counter = coba.Max();
+                int iterasi = counter.ToString().Length;
+                MessageBox.Show(int.Parse(te).ToString());
+
+                RadixSort(coba);
 
                 waktu.Stop();
                 ProcessTime.Text = $"{waktu.ElapsedMilliseconds} ms";
 
-                for (int i = 0; i < data.Length; i++)
-                {
-                    listBoxHasil.Items.Add(data[i]);
-                }
+                //for (int i = 0; i < data.Length; i++)
+                //{
+                //    listBoxHasil.Items.Add(data[i]);
+                //}
             }
             else if (type == "Heap")
             {
@@ -166,7 +194,21 @@ namespace Project_UAS_DataStructure
 
         private int[] RadixSort(int[] daftarData)
         {
+            
 
+           for (int i = 0;i < daftarData.Length; i++) //iterasi sesuai panjang angka
+            {
+
+            }
+            for (int j = 0; j < daftarData.Length; j++) //untuk masukin data ke index baru
+            {
+                if (daftarData[i])
+                {
+
+                }
+            }
+
+            
             return daftarData;
         }
 
