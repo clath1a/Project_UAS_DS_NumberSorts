@@ -7,13 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Diagnostics;
 
 namespace Project_UAS_DataStructure
 {
     public partial class Form1 : Form
     {
-        private int[] dataRaw;
-        private int[] dataProceed;
+        private int[] data;
         private string type = "";
         public Form1()
         {
@@ -61,19 +61,18 @@ namespace Project_UAS_DataStructure
             //Generate Random
             listBoxRaw.Items.Clear();
             int counter = (int)numericUpDown1.Value;
-            dataRaw = new int[counter];
-            dataProceed = new int[counter];
+            data = new int[counter];
 
             Random objRandom = new Random();
             for (int i = 0; i < counter; i++)
             {
                 int tampungAngka = objRandom.Next(0, 10000);
-                dataRaw[i] = tampungAngka;
+                data[i] = tampungAngka;
             }
 
-            for (int i = 0; i < dataRaw.Length; i++)
+            for (int i = 0; i < data.Length; i++)
             {
-                listBoxRaw.Items.Add(dataRaw[i]);
+                listBoxRaw.Items.Add(data[i]);
             }
 
 
@@ -85,55 +84,156 @@ namespace Project_UAS_DataStructure
             listBoxHasil.Items.Clear();
             if (type == "Quick")
             {
-                QuickSort();
+                var waktu = new Stopwatch();
+                waktu.Start();
+
+                QuickSort(data);
+
+                waktu.Stop();
+                ProcessTime.Text = $"{waktu.ElapsedMilliseconds} ms";
+
+                for (int i = 0; i < data.Length; i++)
+                {
+                    listBoxHasil.Items.Add(data[i]);
+                }
             }
             else if (type == "Radix")
             {
-                RadixSort();
+                var waktu = new Stopwatch();
+                waktu.Start();
+
+                RadixSort(data);
+
+                waktu.Stop();
+                ProcessTime.Text = $"{waktu.ElapsedMilliseconds} ms";
+
+                for (int i = 0; i < data.Length; i++)
+                {
+                    listBoxHasil.Items.Add(data[i]);
+                }
             }
             else if (type == "Heap")
             {
-                HeapSort();
+                var waktu = new Stopwatch();
+                waktu.Start();
+
+                HeapSort(data);
+
+                waktu.Stop();
+                ProcessTime.Text = $"{waktu.ElapsedMilliseconds} ms";
+
+                for (int i = 0; i < data.Length; i++)
+                {
+                    listBoxHasil.Items.Add(data[i]);
+                }
             }
             else if (type == "Bubble")
             {
-                BubbleSort();
+                var waktu = new Stopwatch();
+                waktu.Start();
+
+                BubbleSort(data);
+
+                waktu.Stop();
+                ProcessTime.Text = $"{waktu.ElapsedMilliseconds} ms";
+
+                for (int i = 0; i < data.Length; i++)
+                {
+                    listBoxHasil.Items.Add(data[i]);
+                }
             }
             else if (type == "Shell")
             {
-                ShellSort();
+                var waktu = new Stopwatch();
+                waktu.Start();
+
+                ShellSort(data);
+
+                waktu.Stop();
+                ProcessTime.Text = $"{waktu.ElapsedMilliseconds} ms";
+
+                for (int i = 0; i < data.Length; i++)
+                {
+                    listBoxHasil.Items.Add(data[i]);
+                }
             }
         }
 
-        private int[] QuickSort()
+        private int[] QuickSort(int[] daftarData)
         {
-            
-            return dataProceed;
+            return daftarData;
         }
 
-        private int[] RadixSort()
+        private int[] RadixSort(int[] daftarData)
         {
 
-            return dataProceed;
+            return daftarData;
         }
 
-        private int[] HeapSort()
+        private int[] HeapSort(int[] daftarData)
         {
 
-            return dataProceed;
+            return daftarData;
         }
 
-        private int[] BubbleSort()
+        private int[] BubbleSort(int[] daftarData)
         {
-
-            return dataProceed;
+            int tampung = 0;
+            for (int i = 0; i < daftarData.Length; i++)
+            {
+                for (int j = 0; j < daftarData.Length - 1; j++)
+                {
+                    if (daftarData[j] > daftarData[j + 1])
+                    {
+                        tampung = daftarData[j];
+                        daftarData[j] = daftarData[j + 1];
+                        daftarData[j + 1] = tampung;
+                    }
+                }
+            }
+            return daftarData;
         }
 
-        private int[] ShellSort()
+        private int[] ShellSort(int[] daftarData)
         {
+            int n = daftarData.Length;
 
-            return dataProceed;
+            // Start with a big gap, 
+            // then reduce the gap
+            for (int gap = n / 2; gap > 0; gap /= 2)
+            {
+                // Do a gapped insertion sort for this gap size.
+                // The first gap elements a[0..gap-1] are already
+                // in gapped order keep adding one more element
+                // until the entire array is gap sorted
+                for (int i = gap; i < n; i += 1)
+                {
+                    // add a[i] to the elements that have
+                    // been gap sorted save a[i] in temp and
+                    // make a hole at position i
+                    int temp = daftarData[i];
+
+                    // shift earlier gap-sorted elements up until
+                    // the correct location for a[i] is found
+                    int j;
+                    for (j = i; j >= gap && daftarData[j - gap] > temp; j -= gap)
+                        daftarData[j] = daftarData[j - gap];
+
+                    // put temp (the original a[i]) 
+                    // in its correct location
+                    daftarData[j] = temp;
+                }
+            }
+            return daftarData;
+
         }
 
+        private void button3_Click(object sender, EventArgs e)
+        {
+            //Clear Form
+            listBoxHasil.Items.Clear();
+            listBoxRaw.Items.Clear();
+            ProcessTime.Text = "-";
+        }
     }
 }

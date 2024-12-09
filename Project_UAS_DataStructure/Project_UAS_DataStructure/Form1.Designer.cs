@@ -209,9 +209,10 @@
             // ProcessTime
             // 
             this.ProcessTime.AutoSize = true;
+            this.ProcessTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ProcessTime.Location = new System.Drawing.Point(421, 354);
             this.ProcessTime.Name = "ProcessTime";
-            this.ProcessTime.Size = new System.Drawing.Size(43, 16);
+            this.ProcessTime.Size = new System.Drawing.Size(48, 16);
             this.ProcessTime.TabIndex = 14;
             this.ProcessTime.Text = "*Time";
             // 
@@ -221,8 +222,9 @@
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(112, 38);
             this.button3.TabIndex = 15;
-            this.button3.Text = "Process";
+            this.button3.Text = "Clear";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // Form1
             // 
