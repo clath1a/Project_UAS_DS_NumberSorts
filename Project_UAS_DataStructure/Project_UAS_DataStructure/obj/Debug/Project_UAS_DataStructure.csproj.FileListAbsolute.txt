@@ -18,3 +18,13 @@ D:\Sekolah\Materi Kuliah Semester 3\Data Structure\Project_UAS_DS\Project_UAS_Da
 D:\Sekolah\Materi Kuliah Semester 3\Data Structure\Project_UAS_DS\Project_UAS_DataStructure\Project_UAS_DataStructure\obj\Debug\Project_UAS_DataStructure.csproj.CoreCompileInputs.cache
 D:\Sekolah\Materi Kuliah Semester 3\Data Structure\Project_UAS_DS\Project_UAS_DataStructure\Project_UAS_DataStructure\obj\Debug\Project_UAS_DataStructure.exe
 D:\Sekolah\Materi Kuliah Semester 3\Data Structure\Project_UAS_DS\Project_UAS_DataStructure\Project_UAS_DataStructure\obj\Debug\Project_UAS_DataStructure.pdb
+C:\Campus File\Semester 3\Tugas\Data Structure\UAS\Project_UAS_DS\Project_UAS_DataStructure\Project_UAS_DataStructure\bin\Debug\Project_UAS_DataStructure.exe.config
+C:\Campus File\Semester 3\Tugas\Data Structure\UAS\Project_UAS_DS\Project_UAS_DataStructure\Project_UAS_DataStructure\bin\Debug\Project_UAS_DataStructure.exe
+C:\Campus File\Semester 3\Tugas\Data Structure\UAS\Project_UAS_DS\Project_UAS_DataStructure\Project_UAS_DataStructure\bin\Debug\Project_UAS_DataStructure.pdb
+C:\Campus File\Semester 3\Tugas\Data Structure\UAS\Project_UAS_DS\Project_UAS_DataStructure\Project_UAS_DataStructure\obj\Debug\Project_UAS_DataStructure.csproj.AssemblyReference.cache
+C:\Campus File\Semester 3\Tugas\Data Structure\UAS\Project_UAS_DS\Project_UAS_DataStructure\Project_UAS_DataStructure\obj\Debug\Project_UAS_DataStructure.Form1.resources
+C:\Campus File\Semester 3\Tugas\Data Structure\UAS\Project_UAS_DS\Project_UAS_DataStructure\Project_UAS_DataStructure\obj\Debug\Project_UAS_DataStructure.Properties.Resources.resources
+C:\Campus File\Semester 3\Tugas\Data Structure\UAS\Project_UAS_DS\Project_UAS_DataStructure\Project_UAS_DataStructure\obj\Debug\Project_UAS_DataStructure.csproj.GenerateResource.cache
+C:\Campus File\Semester 3\Tugas\Data Structure\UAS\Project_UAS_DS\Project_UAS_DataStructure\Project_UAS_DataStructure\obj\Debug\Project_UAS_DataStructure.csproj.CoreCompileInputs.cache
+C:\Campus File\Semester 3\Tugas\Data Structure\UAS\Project_UAS_DS\Project_UAS_DataStructure\Project_UAS_DataStructure\obj\Debug\Project_UAS_DataStructure.exe
+C:\Campus File\Semester 3\Tugas\Data Structure\UAS\Project_UAS_DS\Project_UAS_DataStructure\Project_UAS_DataStructure\obj\Debug\Project_UAS_DataStructure.pdb

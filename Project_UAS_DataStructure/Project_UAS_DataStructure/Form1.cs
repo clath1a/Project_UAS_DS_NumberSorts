@@ -173,11 +173,40 @@ namespace Project_UAS_DataStructure
 
         private int[] QuickSort(int[] daftarData)
         {
-            return daftarData;
+            if (daftarData.Length <= 1)
+            {
+                return daftarData; // Basis rekursi: array dengan satu elemen atau kosong sudah terurut
+            }
+
+            // Pilih pivot (gunakan elemen terakhir sebagai pivot)
+            int pivot = daftarData[daftarData.Length - 1];
+            var left = new List<int>();  // Elemen yang lebih kecil dari pivot
+            var right = new List<int>(); // Elemen yang lebih besar dari pivot
+
+            // Partisi elemen
+            for (int i = 0; i < daftarData.Length - 1; i++)
+            {
+                if (daftarData[i] <= pivot)
+                {
+                    left.Add(daftarData[i]);
+                }
+                else
+                {
+                    right.Add(daftarData[i]);
+                }
+            }
+
+            // Rekursi pada bagian kiri dan kanan
+            int[] sortedLeft = QuickSort(left.ToArray());
+            int[] sortedRight = QuickSort(right.ToArray());
+
+            // Gabungkan hasil
+            return sortedLeft.Concat(new int[] { pivot }).Concat(sortedRight).ToArray();
         }
 
         private int[] RadixSort(string[] daftarData, int iterasi)
         {
+            
             for (int i = 0; i < iterasi; i++) //iterasi sesuai panjang angka
             {
                 int indexAmbil = iterasi - (i+1);
@@ -240,9 +269,6 @@ namespace Project_UAS_DataStructure
                     {
                         daftarTampung[9].Add(daftarData[j]);
                     }
-
-
-
                 }
 
                 List<string> listFinal = new List<string>();
@@ -251,18 +277,65 @@ namespace Project_UAS_DataStructure
                 {
                     listFinal.AddRange(list);
                 }
-
-
             }
-
-
-            return daftarData;
+            return daftarData.Select(int.Parse).ToArray();          
         }
 
         private int[] HeapSort(int[] daftarData)
         {
+            int n = daftarData.Length;
+
+            // Bangun max heap
+            for (int i = n / 2 - 1; i >= 0; i--)
+            {
+                Heapify(daftarData, n, i);
+            }
+
+            // Ekstraksi elemen dari heap satu per satu
+            for (int i = n - 1; i >= 0; i--)
+            {
+                // Pindahkan root (elemen terbesar) ke akhir array
+                Swap(daftarData, 0, i);
+
+                // Panggil heapify pada heap yang tersisa
+                Heapify(daftarData, i, 0);
+            }
 
             return daftarData;
+        }
+        private void Heapify(int[] array, int n, int i)
+        {
+            int largest = i; // Inisialisasi largest sebagai root
+            int left = 2 * i + 1; // Indeks anak kiri
+            int right = 2 * i + 2; // Indeks anak kanan
+
+            // Jika anak kiri lebih besar dari root
+            if (left < n && array[left] > array[largest])
+            {
+                largest = left;
+            }
+
+            // Jika anak kanan lebih besar dari largest saat ini
+            if (right < n && array[right] > array[largest])
+            {
+                largest = right;
+            }
+
+            // Jika largest bukan root
+            if (largest != i)
+            {
+                Swap(array, i, largest);
+
+                // Rekursi untuk subtree yang terpengaruh
+                Heapify(array, n, largest);
+            }
+        }
+
+        private void Swap(int[] array, int i, int j)
+        {
+            int temp = array[i];
+            array[i] = array[j];
+            array[j] = temp;
         }
 
         private int[] BubbleSort(int[] daftarData)
@@ -323,6 +396,22 @@ namespace Project_UAS_DataStructure
             listBoxHasil.Items.Clear();
             listBoxRaw.Items.Clear();
             ProcessTime.Text = "-";
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            //Exit form
+            this.Close();
+        }
+
+        private void radioButton7_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void radioButton6_CheckedChanged(object sender, EventArgs e)
+        {
 
         }
     }
