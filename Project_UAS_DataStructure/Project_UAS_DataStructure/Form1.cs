@@ -102,27 +102,28 @@ namespace Project_UAS_DataStructure
             else if (type == "Radix")
             {
                 int iterasi = data.Max().ToString().Length;
-                string[] tampung = new string[counter];
+
+                List<string> tampung = new List<string>();
                 for (int i = 0; i < data.Length; i++)
                 {
-                    tampung[i] = data[i].ToString().PadLeft(iterasi,'0');
+                    tampung.Add(data[i].ToString().PadLeft(iterasi,'0'));
                 }
-
-                RadixSort(tampung, iterasi);
-                
-
 
                 var waktu = new Stopwatch();
                 waktu.Start();
 
+                RadixSort(tampung, iterasi);
 
                 waktu.Stop();
                 ProcessTime.Text = $"{waktu.ElapsedMilliseconds} ms";
 
                 for (int i = 0; i < data.Length; i++)
                 {
+                    data[i] = int.Parse(tampung[i]);
                     listBoxHasil.Items.Add(data[i]);
+
                 }
+
             }
             else if (type == "Heap")
             {
@@ -204,81 +205,80 @@ namespace Project_UAS_DataStructure
             return sortedLeft.Concat(new int[] { pivot }).Concat(sortedRight).ToArray();
         }
 
-        private int[] RadixSort(string[] daftarData, int iterasi)
+        private void RadixSort(List<string> listFinal, int iterasi)
         {
-            
+
             for (int i = 0; i < iterasi; i++) //iterasi sesuai panjang angka
             {
                 int indexAmbil = iterasi - (i+1);
 
                 List<string>[] daftarTampung = new List<string>[10];
 
-                for (int j = 0; i < daftarTampung.Length; i++) // Initialize each list
+                for (int j = 0; j < daftarTampung.Length; j++) // Initialize each list
                 {
-                    daftarTampung[i] = new List<string>();  
+                    daftarTampung[j] = new List<string>();  
                 }
 
-                for (int j = 0; j < daftarTampung.Length; j++) //untuk masukin data ke index baru
+                for (int j = 0; j < listFinal.Count; j++) //untuk masukin data ke index baru
                 {
-                    if (daftarData[j][indexAmbil] == '0')
+                    //ini masih baru urutin yang paling belakang saja
+                    if (listFinal[j][indexAmbil] == '0')
                     {
-                        daftarTampung[0].Add(daftarData[j]);
+                        daftarTampung[0].Add(listFinal[j]);
                     }
 
-                    if (daftarData[j][indexAmbil] == '1')
+                    else if (listFinal[j][indexAmbil] == '1')
                     {
-                        daftarTampung[1].Add(daftarData[j]);
+                        daftarTampung[1].Add(listFinal[j]);
                     }
 
-                    if (daftarData[j][indexAmbil] == '2')
+                    else if (listFinal[j][indexAmbil] == '2')
                     {
-                        daftarTampung[2].Add(daftarData[j]);
+                        daftarTampung[2].Add(listFinal[j]);
                     }
 
-                    if (daftarData[j][indexAmbil] == '3')
+                    else if (listFinal[j][indexAmbil] == '3')
                     {
-                        daftarTampung[3].Add(daftarData[j]);
+                        daftarTampung[3].Add(listFinal[j]);
                     }
 
-                    if (daftarData[j][indexAmbil] == '4')
+                    else if (listFinal[j][indexAmbil] == '4')
                     {
-                        daftarTampung[4].Add(daftarData[j]);
+                        daftarTampung[4].Add(listFinal[j]);
                     }
 
-                    if (daftarData[j][indexAmbil] == '5')
+                    else if (listFinal[j][indexAmbil] == '5')
                     {
-                        daftarTampung[5].Add(daftarData[j]);
+                        daftarTampung[5].Add(listFinal[j]);
                     }
 
-                    if (daftarData[j][indexAmbil] == '6')
+                    else if (listFinal[j][indexAmbil] == '6')
                     {
-                        daftarTampung[6].Add(daftarData[j]);
+                        daftarTampung[6].Add(listFinal[j]);
                     }
 
-                    if (daftarData[j][indexAmbil] == '7')
+                    else if (listFinal[j][indexAmbil] == '7')
                     {
-                        daftarTampung[7].Add(daftarData[j]);
+                        daftarTampung[7].Add(listFinal[j]);
                     }
 
-                    if (daftarData[j][indexAmbil] == '8')
+                    else if (listFinal[j][indexAmbil] == '8')
                     {
-                        daftarTampung[8].Add(daftarData[j]);
+                        daftarTampung[8].Add(listFinal[j]);
                     }
 
-                    if (daftarData[j][indexAmbil] == '9')
+                    else if (listFinal[j][indexAmbil] == '9')
                     {
-                        daftarTampung[9].Add(daftarData[j]);
+                        daftarTampung[9].Add(listFinal[j]);
                     }
                 }
 
-                List<string> listFinal = new List<string>();
-
+                listFinal.Clear();
                 foreach (var list in daftarTampung)
                 {
                     listFinal.AddRange(list);
                 }
             }
-            return daftarData.Select(int.Parse).ToArray();          
         }
 
         private int[] HeapSort(int[] daftarData)
