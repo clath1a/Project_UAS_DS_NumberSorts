@@ -24,41 +24,10 @@ namespace Project_UAS_DataStructure
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            AscendingBtn.Checked = true;
+            
         }
-
-        private void radioButton1_CheckedChanged(object sender, EventArgs e)
-        {
-            //Quick Sort
-            type = "Quick";
-        }
-
-        private void radioButton2_CheckedChanged(object sender, EventArgs e)
-        {
-            //Radix Sort
-            type = "Radix";
-        }
-
-        private void radioButton3_CheckedChanged(object sender, EventArgs e)
-        {
-            //Heap Sort
-            type = "Heap";
-        }
-
-        private void radioButton4_CheckedChanged(object sender, EventArgs e)
-        {
-            //Bubble Sort
-            type = "Bubble";
-        }
-
-        private void radioButton5_CheckedChanged(object sender, EventArgs e)
-        {
-            //Shell Sort
-            type = "Shell";
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
+        private void buttonGenerate_Click(object sender, EventArgs e)
         {
             //Generate Random
             listBoxRaw.Items.Clear();
@@ -76,11 +45,8 @@ namespace Project_UAS_DataStructure
             {
                 listBoxRaw.Items.Add(data[i]);
             }
-
-
         }
-
-        private void button2_Click(object sender, EventArgs e)
+        private void buttonProcess_Click(object sender, EventArgs e)
         {
             //Process Sort
             listBoxHasil.Items.Clear();
@@ -106,7 +72,7 @@ namespace Project_UAS_DataStructure
                 List<string> tampung = new List<string>();
                 for (int i = 0; i < data.Length; i++)
                 {
-                    tampung.Add(data[i].ToString().PadLeft(iterasi,'0'));
+                    tampung.Add(data[i].ToString().PadLeft(iterasi, '0'));
                 }
 
                 var waktu = new Stopwatch();
@@ -171,6 +137,7 @@ namespace Project_UAS_DataStructure
                 }
             }
         }
+
 
         private int[] QuickSort(int[] daftarData)
         {
@@ -303,6 +270,7 @@ namespace Project_UAS_DataStructure
 
             return daftarData;
         }
+
         private void Heapify(int[] array, int n, int i)
         {
             int largest = i; // Inisialisasi largest sebagai root
@@ -341,15 +309,33 @@ namespace Project_UAS_DataStructure
         private int[] BubbleSort(int[] daftarData)
         {
             int tampung = 0;
-            for (int i = 0; i < daftarData.Length; i++)
+            if (AscendingBtn.Checked) //ascending order
             {
-                for (int j = 0; j < daftarData.Length - 1; j++)
+                for (int i = 0; i < daftarData.Length; i++)
                 {
-                    if (daftarData[j] > daftarData[j + 1])
+                    for (int j = 0; j < daftarData.Length - 1; j++)
                     {
-                        tampung = daftarData[j];
-                        daftarData[j] = daftarData[j + 1];
-                        daftarData[j + 1] = tampung;
+                        if (daftarData[j] > daftarData[j + 1])
+                        {
+                            tampung = daftarData[j];
+                            daftarData[j] = daftarData[j + 1];
+                            daftarData[j + 1] = tampung;
+                        }
+                    }
+                }
+            }
+            else //descending order
+            {
+                for (int i = 0; i < daftarData.Length; i++)
+                {
+                    for (int j = 0; j < daftarData.Length - 1; j++)
+                    {
+                        if (daftarData[j] < daftarData[j + 1])
+                        {
+                            tampung = daftarData[j];
+                            daftarData[j] = daftarData[j + 1];
+                            daftarData[j + 1] = tampung;
+                        }
                     }
                 }
             }
@@ -379,11 +365,13 @@ namespace Project_UAS_DataStructure
                     // the correct location for a[i] is found
                     int j;
                     for (j = i; j >= gap && daftarData[j - gap] > temp; j -= gap)
+                    {
                         daftarData[j] = daftarData[j - gap];
-
+                    }
                     // put temp (the original a[i]) 
                     // in its correct location
                     daftarData[j] = temp;
+
                 }
             }
             return daftarData;
@@ -405,14 +393,37 @@ namespace Project_UAS_DataStructure
             this.Close();
         }
 
-        private void radioButton7_CheckedChanged(object sender, EventArgs e)
+
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
         {
+            //Quick Sort
+            type = "Quick";
+        }
+
+        private void radioButton2_CheckedChanged(object sender, EventArgs e)
+        {
+            //Radix Sort
+            type = "Radix";
+        }
+
+        private void radioButton3_CheckedChanged(object sender, EventArgs e)
+        {
+            //Heap Sort
+            type = "Heap";
+        }
+
+        private void radioButton4_CheckedChanged(object sender, EventArgs e)
+        {
+            //Bubble Sort
+            type = "Bubble";
+        }
+
+        private void radioButton5_CheckedChanged(object sender, EventArgs e)
+        {
+            //Shell Sort
+            type = "Shell";
 
         }
 
-        private void radioButton6_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }
