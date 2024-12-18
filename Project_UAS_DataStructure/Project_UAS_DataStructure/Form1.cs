@@ -174,7 +174,7 @@ namespace Project_UAS_DataStructure
 
         private void RadixSort(List<string> listFinal, int iterasi)
         {
-
+            
             for (int i = 0; i < iterasi; i++) //iterasi sesuai panjang angka
             {
                 int indexAmbil = iterasi - (i+1);
@@ -188,55 +188,22 @@ namespace Project_UAS_DataStructure
 
                 for (int j = 0; j < listFinal.Count; j++) //untuk masukin data ke index baru
                 {
-                    //ini masih baru urutin yang paling belakang saja
-                    if (listFinal[j][indexAmbil] == '0')
+                    for (int k = 0; k < daftarTampung.Length; k++)
                     {
-                        daftarTampung[0].Add(listFinal[j]);
-                    }
-
-                    else if (listFinal[j][indexAmbil] == '1')
-                    {
-                        daftarTampung[1].Add(listFinal[j]);
-                    }
-
-                    else if (listFinal[j][indexAmbil] == '2')
-                    {
-                        daftarTampung[2].Add(listFinal[j]);
-                    }
-
-                    else if (listFinal[j][indexAmbil] == '3')
-                    {
-                        daftarTampung[3].Add(listFinal[j]);
-                    }
-
-                    else if (listFinal[j][indexAmbil] == '4')
-                    {
-                        daftarTampung[4].Add(listFinal[j]);
-                    }
-
-                    else if (listFinal[j][indexAmbil] == '5')
-                    {
-                        daftarTampung[5].Add(listFinal[j]);
-                    }
-
-                    else if (listFinal[j][indexAmbil] == '6')
-                    {
-                        daftarTampung[6].Add(listFinal[j]);
-                    }
-
-                    else if (listFinal[j][indexAmbil] == '7')
-                    {
-                        daftarTampung[7].Add(listFinal[j]);
-                    }
-
-                    else if (listFinal[j][indexAmbil] == '8')
-                    {
-                        daftarTampung[8].Add(listFinal[j]);
-                    }
-
-                    else if (listFinal[j][indexAmbil] == '9')
-                    {
-                        daftarTampung[9].Add(listFinal[j]);
+                        
+                        if (listFinal[j][indexAmbil] == ((char)k + '0'))
+                        {
+                            if (AscendingBtn.Checked) // kecil => besar => kecil
+                            {
+                                daftarTampung[k].Add(listFinal[j]);
+                                break;
+                            }
+                            else
+                            {
+                                daftarTampung[daftarTampung.Length - (k+1)].Add(listFinal[j]);
+                                break;
+                            }
+                        }
                     }
                 }
 
@@ -364,10 +331,22 @@ namespace Project_UAS_DataStructure
                     // shift earlier gap-sorted elements up until
                     // the correct location for a[i] is found
                     int j;
-                    for (j = i; j >= gap && daftarData[j - gap] > temp; j -= gap)
+
+                    if (AscendingBtn.Checked)
                     {
-                        daftarData[j] = daftarData[j - gap];
+                        for (j = i; j >= gap && daftarData[j - gap] > temp; j -= gap)
+                        {
+                            daftarData[j] = daftarData[j - gap];
+                        }
                     }
+                    else
+                    {
+                        for (j = i; j >= gap && daftarData[j - gap] < temp; j -= gap)
+                        {
+                            daftarData[j] = daftarData[j - gap];
+                        }
+                    }
+
                     // put temp (the original a[i]) 
                     // in its correct location
                     daftarData[j] = temp;
