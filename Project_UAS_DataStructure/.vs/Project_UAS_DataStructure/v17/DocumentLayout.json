@@ -1,14 +1,14 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\Sekolah\\Materi Kuliah Semester 3\\Data Structure\\Project_UAS_DS\\Project_UAS_DataStructure\\",
+  "WorkspaceRootPath": "E:\\-00- Ricky Cahyadi\\-01- UBAYA\\-003- Semester 3\\02_Data_Structure\\00_Project_UAS\\Project_UAS_DS\\Project_UAS_DataStructure\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{172FAAAD-7E80-4029-B1C7-DD6A6C14341B}|Project_UAS_DataStructure\\Project_UAS_DataStructure.csproj|d:\\sekolah\\materi kuliah semester 3\\data structure\\project_uas_ds\\project_uas_datastructure\\project_uas_datastructure\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{172FAAAD-7E80-4029-B1C7-DD6A6C14341B}|Project_UAS_DataStructure\\Project_UAS_DataStructure.csproj|solutionrelative:project_uas_datastructure\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{172FAAAD-7E80-4029-B1C7-DD6A6C14341B}|Project_UAS_DataStructure\\Project_UAS_DataStructure.csproj|E:\\-00- Ricky Cahyadi\\-01- UBAYA\\-003- Semester 3\\02_Data_Structure\\00_Project_UAS\\Project_UAS_DS\\Project_UAS_DataStructure\\project_uas_datastructure\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{172FAAAD-7E80-4029-B1C7-DD6A6C14341B}|Project_UAS_DataStructure\\Project_UAS_DataStructure.csproj|solutionrelative:project_uas_datastructure\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{172FAAAD-7E80-4029-B1C7-DD6A6C14341B}|Project_UAS_DataStructure\\Project_UAS_DataStructure.csproj|D:\\Sekolah\\Materi Kuliah Semester 3\\Data Structure\\Project_UAS_DS\\Project_UAS_DataStructure\\project_uas_datastructure\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{172FAAAD-7E80-4029-B1C7-DD6A6C14341B}|Project_UAS_DataStructure\\Project_UAS_DataStructure.csproj|solutionrelative:project_uas_datastructure\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{172FAAAD-7E80-4029-B1C7-DD6A6C14341B}|Project_UAS_DataStructure\\Project_UAS_DataStructure.csproj|e:\\-00- ricky cahyadi\\-01- ubaya\\-003- semester 3\\02_data_structure\\00_project_uas\\project_uas_ds\\project_uas_datastructure\\project_uas_datastructure\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{172FAAAD-7E80-4029-B1C7-DD6A6C14341B}|Project_UAS_DataStructure\\Project_UAS_DataStructure.csproj|solutionrelative:project_uas_datastructure\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,39 +18,32 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
-            },
-            {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Form1.cs",
-              "DocumentMoniker": "D:\\Sekolah\\Materi Kuliah Semester 3\\Data Structure\\Project_UAS_DS\\Project_UAS_DataStructure\\Project_UAS_DataStructure\\Form1.cs",
+              "DocumentMoniker": "E:\\-00- Ricky Cahyadi\\-01- UBAYA\\-003- Semester 3\\02_Data_Structure\\00_Project_UAS\\Project_UAS_DS\\Project_UAS_DataStructure\\Project_UAS_DataStructure\\Form1.cs",
               "RelativeDocumentMoniker": "Project_UAS_DataStructure\\Form1.cs",
-              "ToolTip": "D:\\Sekolah\\Materi Kuliah Semester 3\\Data Structure\\Project_UAS_DS\\Project_UAS_DataStructure\\Project_UAS_DataStructure\\Form1.cs",
+              "ToolTip": "E:\\-00- Ricky Cahyadi\\-01- UBAYA\\-003- Semester 3\\02_Data_Structure\\00_Project_UAS\\Project_UAS_DS\\Project_UAS_DataStructure\\Project_UAS_DataStructure\\Form1.cs",
               "RelativeToolTip": "Project_UAS_DataStructure\\Form1.cs",
-              "ViewState": "AgIAANwAAAAAAAAAAAAawOkAAAAsAAAAAAAAAA==",
+              "ViewState": "AQIAAHwAAAAAAAAAAADwvysAAAAuAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-08T15:47:37.258Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "Form1.cs [Design]",
-              "DocumentMoniker": "D:\\Sekolah\\Materi Kuliah Semester 3\\Data Structure\\Project_UAS_DS\\Project_UAS_DataStructure\\Project_UAS_DataStructure\\Form1.cs",
+              "DocumentMoniker": "E:\\-00- Ricky Cahyadi\\-01- UBAYA\\-003- Semester 3\\02_Data_Structure\\00_Project_UAS\\Project_UAS_DS\\Project_UAS_DataStructure\\Project_UAS_DataStructure\\Form1.cs",
               "RelativeDocumentMoniker": "Project_UAS_DataStructure\\Form1.cs",
-              "ToolTip": "D:\\Sekolah\\Materi Kuliah Semester 3\\Data Structure\\Project_UAS_DS\\Project_UAS_DataStructure\\Project_UAS_DataStructure\\Form1.cs [Design]",
+              "ToolTip": "E:\\-00- Ricky Cahyadi\\-01- UBAYA\\-003- Semester 3\\02_Data_Structure\\00_Project_UAS\\Project_UAS_DS\\Project_UAS_DataStructure\\Project_UAS_DataStructure\\Form1.cs [Design]",
               "RelativeToolTip": "Project_UAS_DataStructure\\Form1.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-08T15:47:34.93Z"
+              "WhenOpened": "2024-12-08T15:47:34.93Z",
+              "EditorCaption": " [Design]"
             }
           ]
         }

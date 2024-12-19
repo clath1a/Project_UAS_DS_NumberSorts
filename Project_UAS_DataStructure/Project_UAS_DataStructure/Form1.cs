@@ -15,7 +15,6 @@ namespace Project_UAS_DataStructure
     {
         private int[] data;
         private string type = "";
-        private int counter; // untuk menentukan panjang arr
 
         public Form1()
         {
@@ -25,17 +24,16 @@ namespace Project_UAS_DataStructure
         private void Form1_Load(object sender, EventArgs e)
         {
             AscendingBtn.Checked = true;
-            
         }
+
         private void buttonGenerate_Click(object sender, EventArgs e)
         {
             //Generate Random
             listBoxRaw.Items.Clear();
-            counter = (int)numericUpDown1.Value;
-            data = new int[counter];
+            data = new int[(int)numericUpDown1.Value];
 
             Random objRandom = new Random();
-            for (int i = 0; i < counter; i++)
+            for (int i = 0; i < (int)numericUpDown1.Value; i++)
             {
                 int tampungAngka = objRandom.Next(0, 10000);
                 data[i] = tampungAngka;
@@ -46,18 +44,21 @@ namespace Project_UAS_DataStructure
                 listBoxRaw.Items.Add(data[i]);
             }
         }
+
         private void buttonProcess_Click(object sender, EventArgs e)
         {
+            // Menjalankan waktu
+            var waktu = new Stopwatch();
+            waktu.Start();
+
             //Process Sort
             listBoxHasil.Items.Clear();
             if (type == "Quick")
             {
-                var waktu = new Stopwatch();
-                waktu.Start();
-
                 QuickSort(data);
 
                 waktu.Stop();
+
                 ProcessTime.Text = $"{waktu.ElapsedMilliseconds} ms";
 
                 for (int i = 0; i < data.Length; i++)
@@ -75,9 +76,6 @@ namespace Project_UAS_DataStructure
                     tampung.Add(data[i].ToString().PadLeft(iterasi, '0'));
                 }
 
-                var waktu = new Stopwatch();
-                waktu.Start();
-
                 RadixSort(tampung, iterasi);
 
                 waktu.Stop();
@@ -93,9 +91,6 @@ namespace Project_UAS_DataStructure
             }
             else if (type == "Heap")
             {
-                var waktu = new Stopwatch();
-                waktu.Start();
-
                 HeapSort(data);
 
                 waktu.Stop();
@@ -108,9 +103,6 @@ namespace Project_UAS_DataStructure
             }
             else if (type == "Bubble")
             {
-                var waktu = new Stopwatch();
-                waktu.Start();
-
                 BubbleSort(data);
 
                 waktu.Stop();
@@ -123,9 +115,6 @@ namespace Project_UAS_DataStructure
             }
             else if (type == "Shell")
             {
-                var waktu = new Stopwatch();
-                waktu.Start();
-
                 ShellSort(data);
 
                 waktu.Stop();
@@ -138,7 +127,7 @@ namespace Project_UAS_DataStructure
             }
         }
 
-
+        #region Quick Sort
         private int[] QuickSort(int[] daftarData)
         {
             if (daftarData.Length <= 1)
@@ -171,7 +160,8 @@ namespace Project_UAS_DataStructure
             // Gabungkan hasil
             return sortedLeft.Concat(new int[] { pivot }).Concat(sortedRight).ToArray();
         }
-
+        #endregion
+        #region Radix Sort
         private void RadixSort(List<string> listFinal, int iterasi)
         {
             
@@ -214,7 +204,8 @@ namespace Project_UAS_DataStructure
                 }
             }
         }
-
+        #endregion
+        #region Heap Sort
         private int[] HeapSort(int[] daftarData)
         {
             int n = daftarData.Length;
@@ -238,6 +229,7 @@ namespace Project_UAS_DataStructure
             return daftarData;
         }
 
+        #region Heapify
         private void Heapify(int[] array, int n, int i)
         {
             int largest = i; // Inisialisasi largest sebagai root
@@ -265,14 +257,10 @@ namespace Project_UAS_DataStructure
                 Heapify(array, n, largest);
             }
         }
+        #endregion
 
-        private void Swap(int[] array, int i, int j)
-        {
-            int temp = array[i];
-            array[i] = array[j];
-            array[j] = temp;
-        }
-
+        #endregion
+        #region Bubble Sort
         private int[] BubbleSort(int[] daftarData)
         {
             int tampung = 0;
@@ -308,7 +296,8 @@ namespace Project_UAS_DataStructure
             }
             return daftarData;
         }
-
+        #endregion
+        #region Shell Sort
         private int[] ShellSort(int[] daftarData)
         {
             int n = daftarData.Length;
@@ -354,55 +343,64 @@ namespace Project_UAS_DataStructure
                 }
             }
             return daftarData;
-
         }
+        #endregion
 
-        private void button3_Click(object sender, EventArgs e)
+        #region Swap
+        private void Swap(int[] array, int i, int j)
         {
-            //Clear Form
-            listBoxHasil.Items.Clear();
-            listBoxRaw.Items.Clear();
-            ProcessTime.Text = "-";
-
+            int temp = array[i];
+            array[i] = array[j];
+            array[j] = temp;
         }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-            //Exit form
-            this.Close();
-        }
-
-
-        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        #endregion
+        #region Event Button
+        #region Radio Button
+        private void radioButtonQuickSort_CheckedChanged(object sender, EventArgs e)
         {
             //Quick Sort
             type = "Quick";
         }
 
-        private void radioButton2_CheckedChanged(object sender, EventArgs e)
+        private void radioButtonRadixSort_CheckedChanged(object sender, EventArgs e)
         {
             //Radix Sort
             type = "Radix";
         }
 
-        private void radioButton3_CheckedChanged(object sender, EventArgs e)
+        private void radioButtonHeapSort_CheckedChanged(object sender, EventArgs e)
         {
             //Heap Sort
             type = "Heap";
         }
 
-        private void radioButton4_CheckedChanged(object sender, EventArgs e)
+        private void radioButtonBubbleSort_CheckedChanged(object sender, EventArgs e)
         {
             //Bubble Sort
             type = "Bubble";
         }
 
-        private void radioButton5_CheckedChanged(object sender, EventArgs e)
+        private void radioButtonShellSort_CheckedChanged(object sender, EventArgs e)
         {
             //Shell Sort
             type = "Shell";
-
         }
+        #endregion
+
+        private void buttonClear_Click(object sender, EventArgs e)
+        {
+            //Clear Form
+            listBoxHasil.Items.Clear();
+            listBoxRaw.Items.Clear();
+            ProcessTime.Text = "-";
+        }
+
+        private void buttonExit_Click(object sender, EventArgs e)
+        {
+            //Exit form
+            Application.Exit();
+        }
+        #endregion
 
     }
 }

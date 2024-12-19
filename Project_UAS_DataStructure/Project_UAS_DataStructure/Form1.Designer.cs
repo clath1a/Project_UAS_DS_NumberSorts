@@ -35,11 +35,11 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.QuickSortBtn = new System.Windows.Forms.RadioButton();
-            this.RadixSortBtn = new System.Windows.Forms.RadioButton();
-            this.HeapSortBtn = new System.Windows.Forms.RadioButton();
-            this.BubbleSortBtn = new System.Windows.Forms.RadioButton();
-            this.ShellSortBtn = new System.Windows.Forms.RadioButton();
+            this.radioButtonQuick = new System.Windows.Forms.RadioButton();
+            this.radioButtonRadixSort = new System.Windows.Forms.RadioButton();
+            this.radioButtonHeapSort = new System.Windows.Forms.RadioButton();
+            this.radioButtonBubbleSort = new System.Windows.Forms.RadioButton();
+            this.radioButtonShellSort = new System.Windows.Forms.RadioButton();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.label4 = new System.Windows.Forms.Label();
             this.ProcessTime = new System.Windows.Forms.Label();
@@ -56,9 +56,10 @@
             // 
             this.buttonGenerate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(212)))), ((int)(((byte)(249)))));
             this.buttonGenerate.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonGenerate.Location = new System.Drawing.Point(249, 57);
+            this.buttonGenerate.Location = new System.Drawing.Point(187, 46);
+            this.buttonGenerate.Margin = new System.Windows.Forms.Padding(2);
             this.buttonGenerate.Name = "buttonGenerate";
-            this.buttonGenerate.Size = new System.Drawing.Size(112, 38);
+            this.buttonGenerate.Size = new System.Drawing.Size(84, 31);
             this.buttonGenerate.TabIndex = 0;
             this.buttonGenerate.Text = "Generate";
             this.buttonGenerate.UseVisualStyleBackColor = false;
@@ -68,9 +69,10 @@
             // 
             this.buttonProcess.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(212)))), ((int)(((byte)(249)))));
             this.buttonProcess.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonProcess.Location = new System.Drawing.Point(424, 250);
+            this.buttonProcess.Location = new System.Drawing.Point(318, 203);
+            this.buttonProcess.Margin = new System.Windows.Forms.Padding(2);
             this.buttonProcess.Name = "buttonProcess";
-            this.buttonProcess.Size = new System.Drawing.Size(112, 38);
+            this.buttonProcess.Size = new System.Drawing.Size(84, 31);
             this.buttonProcess.TabIndex = 1;
             this.buttonProcess.Text = "Process";
             this.buttonProcess.UseVisualStyleBackColor = false;
@@ -81,10 +83,10 @@
             this.listBoxRaw.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(227)))), ((int)(((byte)(243)))));
             this.listBoxRaw.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listBoxRaw.FormattingEnabled = true;
-            this.listBoxRaw.ItemHeight = 16;
-            this.listBoxRaw.Location = new System.Drawing.Point(28, 101);
+            this.listBoxRaw.Location = new System.Drawing.Point(21, 82);
+            this.listBoxRaw.Margin = new System.Windows.Forms.Padding(2);
             this.listBoxRaw.Name = "listBoxRaw";
-            this.listBoxRaw.Size = new System.Drawing.Size(333, 676);
+            this.listBoxRaw.Size = new System.Drawing.Size(251, 550);
             this.listBoxRaw.TabIndex = 2;
             // 
             // listBoxHasil
@@ -92,10 +94,10 @@
             this.listBoxHasil.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(227)))), ((int)(((byte)(243)))));
             this.listBoxHasil.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listBoxHasil.FormattingEnabled = true;
-            this.listBoxHasil.ItemHeight = 16;
-            this.listBoxHasil.Location = new System.Drawing.Point(605, 101);
+            this.listBoxHasil.Location = new System.Drawing.Point(454, 82);
+            this.listBoxHasil.Margin = new System.Windows.Forms.Padding(2);
             this.listBoxHasil.Name = "listBoxHasil";
-            this.listBoxHasil.Size = new System.Drawing.Size(345, 676);
+            this.listBoxHasil.Size = new System.Drawing.Size(260, 550);
             this.listBoxHasil.TabIndex = 3;
             // 
             // label1
@@ -103,9 +105,10 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(223)))), ((int)(((byte)(192)))));
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(51, 16);
+            this.label1.Location = new System.Drawing.Point(38, 13);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(240, 25);
+            this.label1.Size = new System.Drawing.Size(197, 20);
             this.label1.TabIndex = 4;
             this.label1.Text = "Masukan Jumlah Data :";
             // 
@@ -114,9 +117,10 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(223)))), ((int)(((byte)(192)))));
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(713, 12);
+            this.label2.Location = new System.Drawing.Point(535, 10);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(141, 29);
+            this.label2.Size = new System.Drawing.Size(111, 24);
             this.label2.TabIndex = 5;
             this.label2.Text = "Hasil Sort :";
             // 
@@ -125,81 +129,88 @@
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(223)))), ((int)(((byte)(192)))));
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold);
-            this.label3.Location = new System.Drawing.Point(377, 12);
+            this.label3.Location = new System.Drawing.Point(283, 10);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(206, 29);
+            this.label3.Size = new System.Drawing.Size(164, 24);
             this.label3.TabIndex = 6;
             this.label3.Text = "Metode Sorting :";
             // 
-            // QuickSortBtn
+            // radioButtonQuick
             // 
-            this.QuickSortBtn.AutoSize = true;
-            this.QuickSortBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.QuickSortBtn.Location = new System.Drawing.Point(424, 101);
-            this.QuickSortBtn.Name = "QuickSortBtn";
-            this.QuickSortBtn.Size = new System.Drawing.Size(95, 21);
-            this.QuickSortBtn.TabIndex = 7;
-            this.QuickSortBtn.TabStop = true;
-            this.QuickSortBtn.Text = "Quick Sort";
-            this.QuickSortBtn.UseVisualStyleBackColor = true;
-            this.QuickSortBtn.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
+            this.radioButtonQuick.AutoSize = true;
+            this.radioButtonQuick.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButtonQuick.Location = new System.Drawing.Point(318, 82);
+            this.radioButtonQuick.Margin = new System.Windows.Forms.Padding(2);
+            this.radioButtonQuick.Name = "radioButtonQuick";
+            this.radioButtonQuick.Size = new System.Drawing.Size(75, 17);
+            this.radioButtonQuick.TabIndex = 7;
+            this.radioButtonQuick.TabStop = true;
+            this.radioButtonQuick.Text = "Quick Sort";
+            this.radioButtonQuick.UseVisualStyleBackColor = true;
+            this.radioButtonQuick.CheckedChanged += new System.EventHandler(this.radioButtonQuickSort_CheckedChanged);
             // 
-            // RadixSortBtn
+            // radioButtonRadixSort
             // 
-            this.RadixSortBtn.AutoSize = true;
-            this.RadixSortBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RadixSortBtn.Location = new System.Drawing.Point(424, 127);
-            this.RadixSortBtn.Name = "RadixSortBtn";
-            this.RadixSortBtn.Size = new System.Drawing.Size(94, 21);
-            this.RadixSortBtn.TabIndex = 8;
-            this.RadixSortBtn.TabStop = true;
-            this.RadixSortBtn.Text = "Radix Sort";
-            this.RadixSortBtn.UseVisualStyleBackColor = true;
-            this.RadixSortBtn.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
+            this.radioButtonRadixSort.AutoSize = true;
+            this.radioButtonRadixSort.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButtonRadixSort.Location = new System.Drawing.Point(316, 103);
+            this.radioButtonRadixSort.Margin = new System.Windows.Forms.Padding(2);
+            this.radioButtonRadixSort.Name = "radioButtonRadixSort";
+            this.radioButtonRadixSort.Size = new System.Drawing.Size(74, 17);
+            this.radioButtonRadixSort.TabIndex = 8;
+            this.radioButtonRadixSort.TabStop = true;
+            this.radioButtonRadixSort.Text = "Radix Sort";
+            this.radioButtonRadixSort.UseVisualStyleBackColor = true;
+            this.radioButtonRadixSort.CheckedChanged += new System.EventHandler(this.radioButtonRadixSort_CheckedChanged);
             // 
-            // HeapSortBtn
+            // radioButtonHeapSort
             // 
-            this.HeapSortBtn.AutoSize = true;
-            this.HeapSortBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.HeapSortBtn.Location = new System.Drawing.Point(424, 154);
-            this.HeapSortBtn.Name = "HeapSortBtn";
-            this.HeapSortBtn.Size = new System.Drawing.Size(93, 21);
-            this.HeapSortBtn.TabIndex = 9;
-            this.HeapSortBtn.TabStop = true;
-            this.HeapSortBtn.Text = "Heap Sort";
-            this.HeapSortBtn.UseVisualStyleBackColor = true;
-            this.HeapSortBtn.CheckedChanged += new System.EventHandler(this.radioButton3_CheckedChanged);
+            this.radioButtonHeapSort.AutoSize = true;
+            this.radioButtonHeapSort.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButtonHeapSort.Location = new System.Drawing.Point(318, 125);
+            this.radioButtonHeapSort.Margin = new System.Windows.Forms.Padding(2);
+            this.radioButtonHeapSort.Name = "radioButtonHeapSort";
+            this.radioButtonHeapSort.Size = new System.Drawing.Size(73, 17);
+            this.radioButtonHeapSort.TabIndex = 9;
+            this.radioButtonHeapSort.TabStop = true;
+            this.radioButtonHeapSort.Text = "Heap Sort";
+            this.radioButtonHeapSort.UseVisualStyleBackColor = true;
+            this.radioButtonHeapSort.CheckedChanged += new System.EventHandler(this.radioButtonHeapSort_CheckedChanged);
             // 
-            // BubbleSortBtn
+            // radioButtonBubbleSort
             // 
-            this.BubbleSortBtn.AutoSize = true;
-            this.BubbleSortBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BubbleSortBtn.Location = new System.Drawing.Point(424, 181);
-            this.BubbleSortBtn.Name = "BubbleSortBtn";
-            this.BubbleSortBtn.Size = new System.Drawing.Size(103, 21);
-            this.BubbleSortBtn.TabIndex = 10;
-            this.BubbleSortBtn.TabStop = true;
-            this.BubbleSortBtn.Text = "Bubble Sort";
-            this.BubbleSortBtn.UseVisualStyleBackColor = true;
-            this.BubbleSortBtn.CheckedChanged += new System.EventHandler(this.radioButton4_CheckedChanged);
+            this.radioButtonBubbleSort.AutoSize = true;
+            this.radioButtonBubbleSort.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButtonBubbleSort.Location = new System.Drawing.Point(318, 147);
+            this.radioButtonBubbleSort.Margin = new System.Windows.Forms.Padding(2);
+            this.radioButtonBubbleSort.Name = "radioButtonBubbleSort";
+            this.radioButtonBubbleSort.Size = new System.Drawing.Size(80, 17);
+            this.radioButtonBubbleSort.TabIndex = 10;
+            this.radioButtonBubbleSort.TabStop = true;
+            this.radioButtonBubbleSort.Text = "Bubble Sort";
+            this.radioButtonBubbleSort.UseVisualStyleBackColor = true;
+            this.radioButtonBubbleSort.CheckedChanged += new System.EventHandler(this.radioButtonBubbleSort_CheckedChanged);
             // 
-            // ShellSortBtn
+            // radioButtonShellSort
             // 
-            this.ShellSortBtn.AutoSize = true;
-            this.ShellSortBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ShellSortBtn.Location = new System.Drawing.Point(424, 207);
-            this.ShellSortBtn.Name = "ShellSortBtn";
-            this.ShellSortBtn.Size = new System.Drawing.Size(90, 21);
-            this.ShellSortBtn.TabIndex = 11;
-            this.ShellSortBtn.TabStop = true;
-            this.ShellSortBtn.Text = "Shell Sort";
-            this.ShellSortBtn.UseVisualStyleBackColor = true;
-            this.ShellSortBtn.CheckedChanged += new System.EventHandler(this.radioButton5_CheckedChanged);
+            this.radioButtonShellSort.AutoSize = true;
+            this.radioButtonShellSort.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButtonShellSort.Location = new System.Drawing.Point(318, 168);
+            this.radioButtonShellSort.Margin = new System.Windows.Forms.Padding(2);
+            this.radioButtonShellSort.Name = "radioButtonShellSort";
+            this.radioButtonShellSort.Size = new System.Drawing.Size(70, 17);
+            this.radioButtonShellSort.TabIndex = 11;
+            this.radioButtonShellSort.TabStop = true;
+            this.radioButtonShellSort.Text = "Shell Sort";
+            this.radioButtonShellSort.UseVisualStyleBackColor = true;
+            this.radioButtonShellSort.CheckedChanged += new System.EventHandler(this.radioButtonShellSort_CheckedChanged);
             // 
             // numericUpDown1
             // 
             this.numericUpDown1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(213)))), ((int)(((byte)(219)))));
-            this.numericUpDown1.Location = new System.Drawing.Point(28, 66);
+            this.numericUpDown1.Location = new System.Drawing.Point(21, 54);
+            this.numericUpDown1.Margin = new System.Windows.Forms.Padding(2);
             this.numericUpDown1.Maximum = new decimal(new int[] {
             10000,
             0,
@@ -211,7 +222,7 @@
             0,
             0});
             this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(137, 22);
+            this.numericUpDown1.Size = new System.Drawing.Size(103, 20);
             this.numericUpDown1.TabIndex = 12;
             this.numericUpDown1.Value = new decimal(new int[] {
             1000,
@@ -223,9 +234,10 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(421, 326);
+            this.label4.Location = new System.Drawing.Point(316, 265);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(102, 17);
+            this.label4.Size = new System.Drawing.Size(77, 13);
             this.label4.TabIndex = 13;
             this.label4.Text = "Process Time :";
             // 
@@ -233,9 +245,10 @@
             // 
             this.ProcessTime.AutoSize = true;
             this.ProcessTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ProcessTime.Location = new System.Drawing.Point(421, 354);
+            this.ProcessTime.Location = new System.Drawing.Point(316, 288);
+            this.ProcessTime.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.ProcessTime.Name = "ProcessTime";
-            this.ProcessTime.Size = new System.Drawing.Size(44, 17);
+            this.ProcessTime.Size = new System.Drawing.Size(34, 13);
             this.ProcessTime.TabIndex = 14;
             this.ProcessTime.Text = "*Time";
             // 
@@ -243,33 +256,36 @@
             // 
             this.buttonClear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(212)))), ((int)(((byte)(249)))));
             this.buttonClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonClear.Location = new System.Drawing.Point(424, 501);
+            this.buttonClear.Location = new System.Drawing.Point(320, 409);
+            this.buttonClear.Margin = new System.Windows.Forms.Padding(2);
             this.buttonClear.Name = "buttonClear";
-            this.buttonClear.Size = new System.Drawing.Size(112, 38);
+            this.buttonClear.Size = new System.Drawing.Size(84, 31);
             this.buttonClear.TabIndex = 15;
             this.buttonClear.Text = "Clear";
             this.buttonClear.UseVisualStyleBackColor = false;
-            this.buttonClear.Click += new System.EventHandler(this.button3_Click);
+            this.buttonClear.Click += new System.EventHandler(this.buttonClear_Click);
             // 
             // buttonExit
             // 
             this.buttonExit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(212)))), ((int)(((byte)(249)))));
             this.buttonExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonExit.Location = new System.Drawing.Point(426, 546);
+            this.buttonExit.Location = new System.Drawing.Point(320, 444);
+            this.buttonExit.Margin = new System.Windows.Forms.Padding(2);
             this.buttonExit.Name = "buttonExit";
-            this.buttonExit.Size = new System.Drawing.Size(112, 38);
+            this.buttonExit.Size = new System.Drawing.Size(84, 31);
             this.buttonExit.TabIndex = 16;
             this.buttonExit.Text = "Exit";
             this.buttonExit.UseVisualStyleBackColor = false;
-            this.buttonExit.Click += new System.EventHandler(this.button4_Click);
+            this.buttonExit.Click += new System.EventHandler(this.buttonExit_Click);
             // 
             // DescendingBtn
             // 
             this.DescendingBtn.AutoSize = true;
             this.DescendingBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DescendingBtn.Location = new System.Drawing.Point(192, 9);
+            this.DescendingBtn.Location = new System.Drawing.Point(144, 7);
+            this.DescendingBtn.Margin = new System.Windows.Forms.Padding(2);
             this.DescendingBtn.Name = "DescendingBtn";
-            this.DescendingBtn.Size = new System.Drawing.Size(97, 21);
+            this.DescendingBtn.Size = new System.Drawing.Size(76, 17);
             this.DescendingBtn.TabIndex = 18;
             this.DescendingBtn.TabStop = true;
             this.DescendingBtn.Text = "Desending";
@@ -279,9 +295,10 @@
             // 
             this.AscendingBtn.AutoSize = true;
             this.AscendingBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AscendingBtn.Location = new System.Drawing.Point(20, 9);
+            this.AscendingBtn.Location = new System.Drawing.Point(15, 7);
+            this.AscendingBtn.Margin = new System.Windows.Forms.Padding(2);
             this.AscendingBtn.Name = "AscendingBtn";
-            this.AscendingBtn.Size = new System.Drawing.Size(95, 21);
+            this.AscendingBtn.Size = new System.Drawing.Size(75, 17);
             this.AscendingBtn.TabIndex = 17;
             this.AscendingBtn.TabStop = true;
             this.AscendingBtn.Text = "Ascending";
@@ -291,29 +308,31 @@
             // 
             this.groupBox1.Controls.Add(this.DescendingBtn);
             this.groupBox1.Controls.Add(this.AscendingBtn);
-            this.groupBox1.Location = new System.Drawing.Point(616, 57);
+            this.groupBox1.Location = new System.Drawing.Point(462, 46);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(301, 44);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox1.Size = new System.Drawing.Size(226, 36);
             this.groupBox1.TabIndex = 19;
             this.groupBox1.TabStop = false;
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(234)))), ((int)(((byte)(222)))));
-            this.ClientSize = new System.Drawing.Size(985, 840);
+            this.ClientSize = new System.Drawing.Size(739, 609);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.buttonExit);
             this.Controls.Add(this.buttonClear);
             this.Controls.Add(this.ProcessTime);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.numericUpDown1);
-            this.Controls.Add(this.ShellSortBtn);
-            this.Controls.Add(this.BubbleSortBtn);
-            this.Controls.Add(this.HeapSortBtn);
-            this.Controls.Add(this.RadixSortBtn);
-            this.Controls.Add(this.QuickSortBtn);
+            this.Controls.Add(this.radioButtonShellSort);
+            this.Controls.Add(this.radioButtonBubbleSort);
+            this.Controls.Add(this.radioButtonHeapSort);
+            this.Controls.Add(this.radioButtonRadixSort);
+            this.Controls.Add(this.radioButtonQuick);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -321,6 +340,7 @@
             this.Controls.Add(this.listBoxRaw);
             this.Controls.Add(this.buttonProcess);
             this.Controls.Add(this.buttonGenerate);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
             this.Text = "Data Structure";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -341,11 +361,11 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.RadioButton QuickSortBtn;
-        private System.Windows.Forms.RadioButton RadixSortBtn;
-        private System.Windows.Forms.RadioButton HeapSortBtn;
-        private System.Windows.Forms.RadioButton BubbleSortBtn;
-        private System.Windows.Forms.RadioButton ShellSortBtn;
+        private System.Windows.Forms.RadioButton radioButtonQuick;
+        private System.Windows.Forms.RadioButton radioButtonRadixSort;
+        private System.Windows.Forms.RadioButton radioButtonHeapSort;
+        private System.Windows.Forms.RadioButton radioButtonBubbleSort;
+        private System.Windows.Forms.RadioButton radioButtonShellSort;
         private System.Windows.Forms.NumericUpDown numericUpDown1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label ProcessTime;
