@@ -38,3 +38,13 @@ E:\-00- Ricky Cahyadi\-01- UBAYA\-003- Semester 3\02_Data_Structure\00_Project_U
 E:\-00- Ricky Cahyadi\-01- UBAYA\-003- Semester 3\02_Data_Structure\00_Project_UAS\Project_UAS_DS\Project_UAS_DataStructure\Project_UAS_DataStructure\obj\Debug\Project_UAS_DataStructure.csproj.CoreCompileInputs.cache
 E:\-00- Ricky Cahyadi\-01- UBAYA\-003- Semester 3\02_Data_Structure\00_Project_UAS\Project_UAS_DS\Project_UAS_DataStructure\Project_UAS_DataStructure\obj\Debug\Project_UAS_DataStructure.exe
 E:\-00- Ricky Cahyadi\-01- UBAYA\-003- Semester 3\02_Data_Structure\00_Project_UAS\Project_UAS_DS\Project_UAS_DataStructure\Project_UAS_DataStructure\obj\Debug\Project_UAS_DataStructure.pdb
+C:\Users\Aileen Averina\Documents\Aileen\2.6-Semester 3\Data Structure\Project_UAS_DS\Project_UAS_DataStructure\Project_UAS_DataStructure\bin\Debug\Project_UAS_DataStructure.exe.config
+C:\Users\Aileen Averina\Documents\Aileen\2.6-Semester 3\Data Structure\Project_UAS_DS\Project_UAS_DataStructure\Project_UAS_DataStructure\bin\Debug\Project_UAS_DataStructure.exe
+C:\Users\Aileen Averina\Documents\Aileen\2.6-Semester 3\Data Structure\Project_UAS_DS\Project_UAS_DataStructure\Project_UAS_DataStructure\bin\Debug\Project_UAS_DataStructure.pdb
+C:\Users\Aileen Averina\Documents\Aileen\2.6-Semester 3\Data Structure\Project_UAS_DS\Project_UAS_DataStructure\Project_UAS_DataStructure\obj\Debug\Project_UAS_DataStructure.csproj.AssemblyReference.cache
+C:\Users\Aileen Averina\Documents\Aileen\2.6-Semester 3\Data Structure\Project_UAS_DS\Project_UAS_DataStructure\Project_UAS_DataStructure\obj\Debug\Project_UAS_DataStructure.Form1.resources
+C:\Users\Aileen Averina\Documents\Aileen\2.6-Semester 3\Data Structure\Project_UAS_DS\Project_UAS_DataStructure\Project_UAS_DataStructure\obj\Debug\Project_UAS_DataStructure.Properties.Resources.resources
+C:\Users\Aileen Averina\Documents\Aileen\2.6-Semester 3\Data Structure\Project_UAS_DS\Project_UAS_DataStructure\Project_UAS_DataStructure\obj\Debug\Project_UAS_DataStructure.csproj.GenerateResource.cache
+C:\Users\Aileen Averina\Documents\Aileen\2.6-Semester 3\Data Structure\Project_UAS_DS\Project_UAS_DataStructure\Project_UAS_DataStructure\obj\Debug\Project_UAS_DataStructure.csproj.CoreCompileInputs.cache
+C:\Users\Aileen Averina\Documents\Aileen\2.6-Semester 3\Data Structure\Project_UAS_DS\Project_UAS_DataStructure\Project_UAS_DataStructure\obj\Debug\Project_UAS_DataStructure.exe
+C:\Users\Aileen Averina\Documents\Aileen\2.6-Semester 3\Data Structure\Project_UAS_DS\Project_UAS_DataStructure\Project_UAS_DataStructure\obj\Debug\Project_UAS_DataStructure.pdb

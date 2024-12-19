@@ -55,11 +55,11 @@ namespace Project_UAS_DataStructure
             listBoxHasil.Items.Clear();
             if (type == "Quick")
             {
-                QuickSort(data);
+                QuickSort(data, 0, data.Length - 1);
 
                 waktu.Stop();
 
-                ProcessTime.Text = $"{waktu.ElapsedMilliseconds} ms";
+                ProcessTime.Text = $"{waktu.Elapsed.TotalMilliseconds:F3} ms";
 
                 for (int i = 0; i < data.Length; i++)
                 {
@@ -128,37 +128,74 @@ namespace Project_UAS_DataStructure
         }
 
         #region Quick Sort
-        private int[] QuickSort(int[] daftarData)
+        private int[] QuickSort(int[] daftarData, int first, int last)
         {
-            if (daftarData.Length <= 1)
+            int pos;
+            if (first < last)
             {
-                return daftarData; // Basis rekursi: array dengan satu elemen atau kosong sudah terurut
+                pos = Split(daftarData, first, last);   
+                QuickSort(daftarData, first, pos - 1);
+                QuickSort(daftarData, pos + 1, last);
             }
+            return daftarData;
+        }
 
-            // Pilih pivot (gunakan elemen terakhir sebagai pivot)
-            int pivot = daftarData[daftarData.Length - 1];
-            var left = new List<int>();  // Elemen yang lebih kecil dari pivot
-            var right = new List<int>(); // Elemen yang lebih besar dari pivot
-
-            // Partisi elemen
-            for (int i = 0; i < daftarData.Length - 1; i++)
+        private int Split(int[] daftarData, int first, int last)
+        {
+            int pivot = daftarData[first];
+            int left = first;
+            int right = last;
+            if (AscendingBtn.Checked)
             {
-                if (daftarData[i] <= pivot)
+                while (left < right)
                 {
-                    left.Add(daftarData[i]);
-                }
-                else
-                {
-                    right.Add(daftarData[i]);
+                    // Cari yang lebih kecil dari pivot di kanan
+                    while (daftarData[right] > pivot)
+                    {
+                        right--;
+                    }
+                    // Cari yang lebih besar dari pivot di kiri
+                    while (left < right && daftarData[left] <= pivot)
+                    {
+                        left++;
+                    }
+                    if (left < right)
+                    {
+                        int temp;
+                        temp = daftarData[left];
+                        daftarData[left] = daftarData[right];
+                        daftarData[right] = temp;
+                    }
                 }
             }
+            else
+            {
+                while (left < right)
+                {
+                    // Cari yang lebih kecil dari pivot di kanan
+                    while (daftarData[right] < pivot)
+                    {
+                        right--;
+                    }
 
-            // Rekursi pada bagian kiri dan kanan
-            int[] sortedLeft = QuickSort(left.ToArray());
-            int[] sortedRight = QuickSort(right.ToArray());
+                    // Cari yang lebih besar dari pivot di kiri
+                    while (left < right && daftarData[left] >= pivot)
+                    {
+                        left++;
+                    }
+                    if (left < right)
+                    {
+                        int temp = daftarData[left];
+                        daftarData[left] = daftarData[right];
+                        daftarData[right] = temp;
+                    }
+                }
+            }
+            // Tempatkan pivot di posisi akhir partisi
+            daftarData[first] = daftarData[right];
+            daftarData[right] = pivot;
 
-            // Gabungkan hasil
-            return sortedLeft.Concat(new int[] { pivot }).Concat(sortedRight).ToArray();
+            return right; // Kembalikan posisi pivot
         }
         #endregion
         #region Radix Sort
@@ -257,6 +294,16 @@ namespace Project_UAS_DataStructure
                 Heapify(array, n, largest);
             }
         }
+
+        #endregion
+
+        #region Swap
+        private void Swap(int[] array, int i, int j)
+        {
+            int temp = array[i];
+            array[i] = array[j];
+            array[j] = temp;
+        }
         #endregion
 
         #endregion
@@ -346,14 +393,7 @@ namespace Project_UAS_DataStructure
         }
         #endregion
 
-        #region Swap
-        private void Swap(int[] array, int i, int j)
-        {
-            int temp = array[i];
-            array[i] = array[j];
-            array[j] = temp;
-        }
-        #endregion
+
         #region Event Button
         #region Radio Button
         private void radioButtonQuickSort_CheckedChanged(object sender, EventArgs e)
