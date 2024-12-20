@@ -35,7 +35,7 @@ namespace Project_UAS_DataStructure
             Random objRandom = new Random();
             for (int i = 0; i < (int)numericUpDown1.Value; i++)
             {
-                int tampungAngka = objRandom.Next(0, 10000);
+                int tampungAngka = objRandom.Next(0, 1000000);
                 data[i] = tampungAngka;
             }
 
@@ -246,28 +246,46 @@ namespace Project_UAS_DataStructure
         private int[] HeapSort(int[] daftarData)
         {
             int n = daftarData.Length;
-
-            // Bangun max heap
-            for (int i = n / 2 - 1; i >= 0; i--)
+            if (AscendingBtn.Checked)
             {
-                Heapify(daftarData, n, i);
-            }
+                // Bangun max heap
+                for (int i = n / 2 - 1; i >= 0; i--)
+                {
+                    MaxHeapify(daftarData, n, i);
+                }
+                // Ekstraksi elemen dari heap satu per satu
+                for (int i = n - 1; i >= 0; i--)
+                {
+                    // Pindahkan root (elemen terbesar) ke akhir array
+                    Swap(daftarData, 0, i);
 
-            // Ekstraksi elemen dari heap satu per satu
-            for (int i = n - 1; i >= 0; i--)
+                    // Panggil  asc heapify pada heap yang tersisa
+                    MaxHeapify(daftarData, i, 0);
+                }
+            }
+            else
             {
-                // Pindahkan root (elemen terbesar) ke akhir array
-                Swap(daftarData, 0, i);
+                // Bangun min heap
+                for (int i = n / 2 - 1; i >= 0; i--)
+                {
+                    MinHeapify(daftarData, n, i);
+                }
+                // Ekstraksi elemen dari heap satu per satu
+                for (int i = n - 1; i >= 0; i--)
+                {
+                    // Pindahkan root (elemen terbesar) ke akhir array
+                    Swap(daftarData, 0, i);
 
-                // Panggil heapify pada heap yang tersisa
-                Heapify(daftarData, i, 0);
+                    // Panggil  asc heapify pada heap yang tersisa
+                    MinHeapify(daftarData, i, 0);
+                }
             }
-
             return daftarData;
         }
 
         #region Heapify
-        private void Heapify(int[] array, int n, int i)
+        //max heap
+        private void MaxHeapify(int[] array, int n, int i)
         {
             int largest = i; // Inisialisasi largest sebagai root
             int left = 2 * i + 1; // Indeks anak kiri
@@ -291,10 +309,38 @@ namespace Project_UAS_DataStructure
                 Swap(array, i, largest);
 
                 // Rekursi untuk subtree yang terpengaruh
-                Heapify(array, n, largest);
+                MaxHeapify(array, n, largest);
             }
         }
 
+        //min heax
+        private void MinHeapify(int[] array, int n, int i)
+        {
+            int smallest = i; //inisialisasi smallest jadi root
+            int left = 2 * i + 1; //indeks anak kiri
+            int right = 2 * i + 2; //indeks anak kanan
+
+            // Jika anak kiri lebih besar dari root
+            if (left < n && array[left] < array[smallest])
+            {
+                smallest = 1;
+            }
+
+            // Jika anak kanan lebih besar dari largest saat ini
+            if (right < n && array[right] < array[smallest])
+            {
+                smallest = right;
+            }
+
+            //jika smallest bukan root
+            if (smallest != i)
+            {
+                Swap(array, i, smallest);
+
+                // manggil min heap untuk pengurangan heap
+                MinHeapify(array, i, 0);
+            }
+        }
         #endregion
 
         #region Swap
