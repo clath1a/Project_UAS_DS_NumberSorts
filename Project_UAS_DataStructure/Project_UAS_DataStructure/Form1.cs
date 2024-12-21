@@ -254,6 +254,7 @@ namespace Project_UAS_DataStructure
                     MaxHeapify(daftarData, n, i);
                 }
                 // Ekstraksi elemen dari heap satu per satu
+
                 for (int i = n - 1; i >= 0; i--)
                 {
                     // Pindahkan root (elemen terbesar) ke akhir array
@@ -311,6 +312,7 @@ namespace Project_UAS_DataStructure
                 // Rekursi untuk subtree yang terpengaruh
                 MaxHeapify(array, n, largest);
             }
+
         }
 
         //min heax
@@ -323,7 +325,7 @@ namespace Project_UAS_DataStructure
             // Jika anak kiri lebih besar dari root
             if (left < n && array[left] < array[smallest])
             {
-                smallest = 1;
+                smallest = left;
             }
 
             // Jika anak kanan lebih besar dari largest saat ini
@@ -338,7 +340,7 @@ namespace Project_UAS_DataStructure
                 Swap(array, i, smallest);
 
                 // manggil min heap untuk pengurangan heap
-                MinHeapify(array, i, 0);
+                MinHeapify(array, i, smallest);
             }
         }
         #endregion
