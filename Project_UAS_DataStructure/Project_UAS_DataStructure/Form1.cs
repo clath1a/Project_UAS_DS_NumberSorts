@@ -272,7 +272,7 @@ namespace Project_UAS_DataStructure
                     MinHeapify(daftarData, n, i);
                 }
                 // Ekstraksi elemen dari heap satu per satu
-                for (int i = n - 1; i >= 0; i--)
+                for (int i = n - 1; i > 0; i--)
                 {
                     // Pindahkan root (elemen terbesar) ke akhir array
                     Swap(daftarData, 0, i);
@@ -340,7 +340,7 @@ namespace Project_UAS_DataStructure
                 Swap(array, i, smallest);
 
                 // manggil min heap untuk pengurangan heap
-                MinHeapify(array, i, smallest);
+                MinHeapify(array, n, smallest);
             }
         }
         #endregion
