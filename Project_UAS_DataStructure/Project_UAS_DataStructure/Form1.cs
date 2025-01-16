@@ -16,6 +16,7 @@ namespace Project_UAS_DataStructure
         private int[] data;
         private string type = "";
 
+        private Stopwatch waktu = new Stopwatch();
         public Form1()
         {
             InitializeComponent();
@@ -47,14 +48,11 @@ namespace Project_UAS_DataStructure
 
         private void buttonProcess_Click(object sender, EventArgs e)
         {
-            // Menjalankan waktu
-            var waktu = new Stopwatch();
-            waktu.Start();
-
             //Process Sort
             listBoxHasil.Items.Clear();
             if (type == "Quick")
             {
+                StartWaktu();
                 QuickSort(data, 0, data.Length - 1);
 
                 waktu.Stop();
@@ -76,10 +74,11 @@ namespace Project_UAS_DataStructure
                     tampung.Add(data[i].ToString().PadLeft(iterasi, '0'));
                 }
 
+                StartWaktu();
                 RadixSort(tampung, iterasi);
 
                 waktu.Stop();
-                ProcessTime.Text = $"{waktu.ElapsedMilliseconds} ms";
+                ProcessTime.Text = $"{waktu.Elapsed.TotalMilliseconds:F3} ms";
 
                 for (int i = 0; i < data.Length; i++)
                 {
@@ -91,10 +90,11 @@ namespace Project_UAS_DataStructure
             }
             else if (type == "Heap")
             {
+                StartWaktu();
                 HeapSort(data);
 
                 waktu.Stop();
-                ProcessTime.Text = $"{waktu.ElapsedMilliseconds} ms";
+                ProcessTime.Text = $"{waktu.Elapsed.TotalMilliseconds:F3} ms";
 
                 for (int i = 0; i < data.Length; i++)
                 {
@@ -103,10 +103,11 @@ namespace Project_UAS_DataStructure
             }
             else if (type == "Bubble")
             {
+                StartWaktu();
                 BubbleSort(data);
 
                 waktu.Stop();
-                ProcessTime.Text = $"{waktu.ElapsedMilliseconds} ms";
+                ProcessTime.Text = $"{waktu.Elapsed.TotalMilliseconds:F3} ms";
 
                 for (int i = 0; i < data.Length; i++)
                 {
@@ -115,16 +116,23 @@ namespace Project_UAS_DataStructure
             }
             else if (type == "Shell")
             {
+                StartWaktu();
                 ShellSort(data);
 
                 waktu.Stop();
-                ProcessTime.Text = $"{waktu.ElapsedMilliseconds} ms";
+                ProcessTime.Text = $"{waktu.Elapsed.TotalMilliseconds:F3} ms";
 
                 for (int i = 0; i < data.Length; i++)
                 {
                     listBoxHasil.Items.Add(data[i]);
                 }
             }
+        }
+
+        private void StartWaktu()
+        {
+            // Menjalankan waktu
+            waktu.Start();
         }
 
         #region Quick Sort
