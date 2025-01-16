@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Diagnostics;
+using System.Threading;
 
 namespace Project_UAS_DataStructure
 {
@@ -27,8 +28,15 @@ namespace Project_UAS_DataStructure
             AscendingBtn.Checked = true;
         }
 
+        private void StartWaktu()
+        {
+            // Menjalankan waktu
+            waktu.Start();
+        }
+
         private void buttonGenerate_Click(object sender, EventArgs e)
         {
+
             //Generate Random
             listBoxRaw.Items.Clear();
             data = new int[(int)numericUpDown1.Value];
@@ -50,19 +58,29 @@ namespace Project_UAS_DataStructure
         {
             //Process Sort
             listBoxHasil.Items.Clear();
+            waktu = new Stopwatch();
             if (type == "Quick")
             {
-                StartWaktu();
-                QuickSort(data, 0, data.Length - 1);
-
-                waktu.Stop();
-
-                ProcessTime.Text = $"{waktu.Elapsed.TotalMilliseconds:F3} ms";
-
-                for (int i = 0; i < data.Length; i++)
+                int stackSize = 2 * 1024 * 1024; // Ukuran stack 2MB, aslinya 1MB
+                Thread quickSortThread = new Thread(() =>
                 {
-                    listBoxHasil.Items.Add(data[i]);
-                }
+                    StartWaktu();
+                    QuickSort(data, 0, data.Length - 1);
+                    waktu.Stop();
+
+                    // Tampilkan hasil di UI (pindahkan ke thread UI)
+                    this.Invoke(new Action(() =>
+                    {
+                        ProcessTime.Text = $"{waktu.Elapsed.TotalMilliseconds:F3} ms";
+
+                        for (int i = 0; i < data.Length; i++)
+                        {
+                            listBoxHasil.Items.Add(data[i]);
+                        }
+                    }));
+                }, stackSize);
+                // Jalankan thread
+                quickSortThread.Start();
             }
             else if (type == "Radix")
             {
@@ -84,9 +102,7 @@ namespace Project_UAS_DataStructure
                 {
                     data[i] = int.Parse(tampung[i]);
                     listBoxHasil.Items.Add(data[i]);
-
                 }
-
             }
             else if (type == "Heap")
             {
@@ -129,13 +145,8 @@ namespace Project_UAS_DataStructure
             }
         }
 
-        private void StartWaktu()
-        {
-            // Menjalankan waktu
-            waktu.Start();
-        }
-
         #region Quick Sort
+
         private int[] QuickSort(int[] daftarData, int first, int last)
         {
             int pos;
@@ -147,7 +158,7 @@ namespace Project_UAS_DataStructure
             }
             return daftarData;
         }
-
+        
         private int Split(int[] daftarData, int first, int last)
         {
             int pivot = daftarData[first];
