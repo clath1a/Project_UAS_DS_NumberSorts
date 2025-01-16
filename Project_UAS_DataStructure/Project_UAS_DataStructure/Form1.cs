@@ -415,10 +415,10 @@ namespace Project_UAS_DataStructure
         {
             int n = daftarData.Length;
 
-            // Start with a big gap, then reduce the gap
+            // mulai dengan jarak yang besar lalu dikecilin 
             for (int gap = n / 2; gap > 0; gap /= 2)
             {
-                for (int i = gap; i < n; i += 1)
+                for (int i = gap; i < n; i++)
                 {
                     int temp = daftarData[i];
 
