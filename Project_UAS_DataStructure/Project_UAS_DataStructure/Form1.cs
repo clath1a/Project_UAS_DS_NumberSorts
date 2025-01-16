@@ -220,14 +220,13 @@ namespace Project_UAS_DataStructure
         #region Radix Sort
         private void RadixSort(List<string> listFinal, int iterasi)
         {
-            
             for (int i = 0; i < iterasi; i++) //iterasi sesuai panjang angka
             {
                 int indexAmbil = iterasi - (i+1);
 
                 List<string>[] daftarTampung = new List<string>[10];
 
-                for (int j = 0; j < daftarTampung.Length; j++) // Initialize each list
+                for (int j = 0; j < daftarTampung.Length; j++) // buat list di tiap index array
                 {
                     daftarTampung[j] = new List<string>();  
                 }
@@ -449,11 +448,9 @@ namespace Project_UAS_DataStructure
                             daftarData[j] = daftarData[j - gap];
                         }
                     }
-
                     // put temp (the original a[i]) 
                     // in its correct location
                     daftarData[j] = temp;
-
                 }
             }
             return daftarData;

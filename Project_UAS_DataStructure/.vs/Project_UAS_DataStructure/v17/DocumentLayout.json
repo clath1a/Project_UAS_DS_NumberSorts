@@ -12,9 +12,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{172FAAAD-7E80-4029-B1C7-DD6A6C14341B}|Project_UAS_DataStructure\\Project_UAS_DataStructure.csproj|C:\\Users\\Aileen Averina\\Documents\\Aileen\\2.6-Semester 3\\Data Structure\\Project_UAS_DS\\Project_UAS_DataStructure\\project_uas_datastructure\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{172FAAAD-7E80-4029-B1C7-DD6A6C14341B}|Project_UAS_DataStructure\\Project_UAS_DataStructure.csproj|solutionrelative:project_uas_datastructure\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{172FAAAD-7E80-4029-B1C7-DD6A6C14341B}|Project_UAS_DataStructure\\Project_UAS_DataStructure.csproj|c:\\users\\aileen averina\\documents\\aileen\\2.6-semester 3\\data structure\\project_uas_ds\\project_uas_datastructure\\project_uas_datastructure\\||{B270807C-D8C6-49EB-8EBE-8E8D566637A1}|1e78f8db-6c07-4d61-a18f-7514010abd56"
     }
   ],
   "DocumentGroupContainers": [
@@ -47,8 +44,7 @@
               "ToolTip": "C:\\Users\\Aileen Averina\\Documents\\Aileen\\2.6-Semester 3\\Data Structure\\Project_UAS_DS\\Project_UAS_DataStructure\\Project_UAS_DataStructure\\Project_UAS_DataStructure.csproj",
               "RelativeToolTip": "Project_UAS_DataStructure\\Project_UAS_DataStructure.csproj",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-01-16T05:04:55.698Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-16T05:04:55.698Z"
             },
             {
               "$type": "Document",
@@ -58,7 +54,7 @@
               "RelativeDocumentMoniker": "Project_UAS_DataStructure\\Form1.cs",
               "ToolTip": "C:\\Users\\Aileen Averina\\Documents\\Aileen\\2.6-Semester 3\\Data Structure\\Project_UAS_DS\\Project_UAS_DataStructure\\Project_UAS_DataStructure\\Form1.cs",
               "RelativeToolTip": "Project_UAS_DataStructure\\Form1.cs",
-              "ViewState": "AQIAAJoAAAAAAAAAAAAEwKIAAAAIAAAA",
+              "ViewState": "AQIAAP8AAAAAAAAAAAAYwOQAAABaAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-08T15:47:37.258Z",
               "EditorCaption": ""
