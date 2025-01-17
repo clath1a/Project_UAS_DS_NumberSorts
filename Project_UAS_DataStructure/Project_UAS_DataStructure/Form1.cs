@@ -340,13 +340,13 @@ namespace Project_UAS_DataStructure
             int left = 2 * i + 1; //indeks anak kiri
             int right = 2 * i + 2; //indeks anak kanan
 
-            // Jika anak kiri lebih besar dari root
+            // Jika anak kiri lebih kecil dari root
             if (left < n && array[left] < array[smallest])
             {
                 smallest = left;
             }
 
-            // Jika anak kanan lebih besar dari largest saat ini
+            // Jika anak kanan lebih kecil dari smallest saat ini
             if (right < n && array[right] < array[smallest])
             {
                 smallest = right;
